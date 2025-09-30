@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AA Gadgets — Премиальная техника Apple</title>
+    <!-- AA:Gadgets: SEO base -->
+    <meta name="description" content="AA Gadgets — премиальная техника Apple: iPhone, Mac, iPad, Watch и аксессуары. Быстрая доставка, гарантия и сервис." />
+    <meta name="theme-color" content="#0d0d0d" />
+    <link rel="canonical" href="https://aagadgets.example/" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="AA Gadgets — Премиальная техника Apple" />
+    <meta property="og:description" content="Магазин техники Apple с сервисом премиум-класса. Доставка в день заказа." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aagadgets.example/" />
+    <meta property="og:image" content="https://aagadgets.example/og-cover.jpg" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AA Gadgets — Премиальная техника Apple" />
+    <meta name="twitter:description" content="Официальная техника Apple, Trade‑in, сервис. Быстро и надёжно." />
+    <meta name="twitter:image" content="https://aagadgets.example/og-cover.jpg" />
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AA:Gadgets: Critical CSS preload -->
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+    <!-- AA:Gadgets: Enhanced structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AA Gadgets",
+        "url": "https://aagadgets.example/",
+        "logo": "https://aagadgets.example/logo.png",
+        "description": "Премиальная техника Apple с сервисом высшего класса. Быстрая доставка, гарантия и профессиональная поддержка.",
+        "sameAs": [
+          "https://t.me/aagadgets",
+          "https://instagram.com/aagadgets"
+        ],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+7-900-000-00-00",
+          "contactType": "customer service",
+          "areaServed": "RU",
+          "availableLanguage": ["ru", "en"]
+        }],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Примерная, 123",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        }
+      }
+    </script>
+    
+    <!-- AA:Gadgets: BreadcrumbList schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://aagadgets.example/"
+        }, {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Каталог",
+          "item": "https://aagadgets.example/catalog"
+        }]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- AA:Gadgets: Sticky, transparent header with blur on scroll -->
+    <header class="header" role="banner">
+      <div class="container">
+        <a href="index.html" class="logo">AA Gadgets</a>
+        <nav class="main-nav" role="navigation" aria-label="Главное меню">
+          <ul>
+            <li><a href="categories.html#iphone">iPhone</a></li>
+            <li><a href="categories.html#mac">Mac</a></li>
+            <li><a href="categories.html#ipad">iPad</a></li>
+            <li><a href="categories.html#watch">Watch</a></li>
+            <li><a href="categories.html#accessories">Аксессуары</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button id="header-profile" class="header-profile-btn" aria-label="Профиль" title="Профиль">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 21a8 8 0 10-16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button id="header-cart-trigger" class="header-cart-btn" aria-label="Открыть корзину">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7L5 21H19L21 7M3 7H21M8 11V17M12 11V17M16 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="header-cart-count" id="header-cart-count">0</span>
+          </button>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Переключить тему" title="Переключить тему">
+            <svg
+              class="sun"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.591a.75.75 0 11-1.06-1.06l1.591-1.591a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM17.803 17.803a.75.75 0 01-1.06 0l-1.591-1.591a.75.75 0 111.06-1.06l1.591 1.591a.75.75 0 010 1.06zM12 21a.75.75 0 01-.75-.75v-2.25a.75.75 0 011.5 0v2.25a.75.75 0 01-.75.75zM5.197 17.803a.75.75 0 010-1.06l1.591-1.591a.75.75 0 111.06 1.06l-1.591 1.591a.75.75 0 01-1.06 0zM3 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3.75A.75.75 0 013 12zM6.106 5.197a.75.75 0 011.06 0l1.591 1.591a.75.75 0 11-1.06 1.06L6.106 6.257a.75.75 0 010-1.06z"
+              />
+            </svg>
+            <svg
+              class="moon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.948a.75.75 0 01.981.634A11.25 11.25 0 0112 21a11.25 11.25 0 01-11.25-11.25 11.25 11.25 0 016.718-10.402z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- УНИКАЛЬНОЕ РЕШЕНИЕ 1: Интерактивный Hero блок -->
+      <!-- === СЛАЙДЕР В HERO БЛОКЕ === -->
+      <!-- AA:Gadgets: Hero slider with subtle parallax -->
+      <section class="hero" role="region" aria-label="Главные предложения">
+        <div class="slider-wrapper" aria-live="polite">
+          <!-- Слайд 1: iPhone -->
+          <div class="slide active" data-index="0">
+            <div
+              class="slide-background" data-parallax
+              style="
+                background-image: url('https://www.apple.com/v/iphone-15-pro/c/images/overview/design/design_hero_large.jpg');
+              "
+            ></div>
+            <div class="container">
+              <div class="hero-content">
+                <h1>iPhone 15 Pro</h1>
+                <p>Титан. Так прочен. Так лёгок. Так Pro.</p>
+                <a href="#" class="cta-button" data-cta>Узнать больше</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Слайд 2: MacBook Air -->
+          <div class="slide" data-index="1">
+            <div
+              class="slide-background" data-parallax
+              style="
+                background-image: url('https://www.apple.com/v/macbook-air-13-and-15-m2/b/images/overview/hero/hero_13_15_large.jpg');
+              "
+            ></div>
+            <div class="container">
+              <div class="hero-content">
+                <h1>MacBook Air</h1>
+                <p>Поразительно тонкий. Изумительно быстрый.</p>
+                <a href="#" class="cta-button" data-cta>Выбрать модель</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Слайд 3: Экосистема -->
+          <div class="slide" data-index="2">
+            <div
+              class="slide-background" data-parallax
+              style="
+                background-image: url('https://www.apple.com/v/ios/ios-17/c/images/overview/hero/hero_large.jpg');
+                background-position: top center;
+              "
+            ></div>
+            <div class="container">
+              <div class="hero-content">
+                <h1>Мир Apple</h1>
+                <p>Откройте для себя магию экосистемы в AA Gadgets.</p>
+                <a href="#" class="cta-button" data-cta>В каталог</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Навигация слайдера -->
+        <div class="slider-nav" aria-hidden="false">
+          <button class="prev-btn" aria-label="Предыдущий слайд">&larr;</button>
+          <button class="next-btn" aria-label="Следующий слайд">&rarr;</button>
+        </div>
+        <div class="slider-dots">
+          <!-- Точки будут добавлены через JS -->
+        </div>
+      </section>
+      <!-- === КОНЕЦ СЛАЙДЕРА === -->
+
+      <!-- Секция с анимированными фичами -->
+      <section class="features-scroller">
+        <div class="container">
+          <div class="feature-item animate-on-scroll">
+            <div class="feature-text">
+              <h2>Совершенно новая кнопка Action.</h2>
+              <p>
+                Настройте её на любимую функцию. И она всегда будет под рукой.
+              </p>
+            </div>
+            <img
+              src="https://www.apple.com/v/iphone-15-pro/c/images/overview/chip/chip_display_large.jpg"
+              alt="A17 Pro Chip"
+              loading="lazy" decoding="async" width="1200" height="700"
+            />
+          </div>
+          <div class="feature-item animate-on-scroll">
+            <div class="feature-text">
+              <h2>Чип A17 Pro. Монстр в мире игр.</h2>
+              <p>Самый мощный графический процессор в истории iPhone.</p>
+            </div>
+            <img
+              src="https://www.apple.com/v/iphone-15-pro/c/images/overview/gaming/gaming_console_large.jpg"
+              alt="Gaming on iPhone"
+              loading="lazy" decoding="async" width="1200" height="700"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- AA:Gadgets: Category tiles grid -->
+      <section class="section categories">
+        <div class="container">
+            <h2 class="section__title">Выберите свою категорию</h2>
+            <div class="categories__grid">
+                <a href="#" class="category__card category__card--large" style="background-image: url('https://images.unsplash.com/photo-1616348436168-de43ad0db179?q=80&w=1981&auto=format&fit=crop')"><span>iPhone</span></a>
+                <a href="#" class="category__card" style="background-image: url('https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=1974&auto=format&fit=crop')"><span>iPad</span></a>
+                <a href="#" class="category__card" style="background-image: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1926&auto=format&fit=crop')"><span>Mac</span></a>
+                <a href="#" class="category__card" style="background-image: url('https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=1964&auto=format&fit=crop')"><span>Watch</span></a>
+                <a href="#" class="category__card" style="background-image: url('https://images.unsplash.com/photo-1605464315542-bda3e2f4e605?q=80&w=1770&auto=format&fit=crop')"><span>AirPods</span></a>
+                <a href="#" class="category__card category__card--large" style="background-image: url('https://images.unsplash.com/photo-1618384887924-c97793a83344?q=80&w=1770&auto=format&fit=crop')"><span>Аксессуары</span></a>
+            </div>
+        </div>
+    </section>
+
+      <!-- AA:Gadgets: Product catalog with filters -->
+      <section class="product-catalog" role="region" aria-label="Каталог товаров">
+        <div class="container">
+          <div class="catalog-header animate-on-scroll">
+            <h2 class="section-title">Популярные товары</h2>
+            <div class="catalog-controls">
+              <div class="filter-tags" role="group" aria-label="Фильтры товаров">
+                <button class="filter-tag active" data-filter="all">Все</button>
+                <button class="filter-tag" data-filter="iphone">iPhone</button>
+                <button class="filter-tag" data-filter="mac">Mac</button>
+                <button class="filter-tag" data-filter="ipad">iPad</button>
+                <button class="filter-tag" data-filter="watch">Watch</button>
+                <button class="filter-tag" data-filter="accessories">Аксессуары</button>
+              </div>
+              <div class="sort-controls">
+                <select class="sort-select" aria-label="Сортировка товаров">
+                  <option value="popular">По популярности</option>
+                  <option value="price-low">Сначала дешевле</option>
+                  <option value="price-high">Сначала дороже</option>
+                  <option value="newest">Сначала новинки</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <div class="products-grid">
+            <div class="product-card animate-on-scroll" data-category="iphone">
+              <div class="product-image">
+                <img
+                  src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=5120&hei=3280&fmt=p-jpg&qlt=80&.v=1693009279820"
+                  alt="iPhone 15 Pro"
+                  loading="lazy" decoding="async" width="512" height="328"
+                />
+                <div class="product-badge">Новинка</div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">iPhone 15 Pro</h3>
+                <p class="product-description">Титан. Так прочен. Так лёгок. Так Pro.</p>
+                <div class="product-price">
+                  <span class="current-price">119 990 ₽</span>
+                  <span class="old-price">129 990 ₽</span>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Добавить iPhone 15 Pro в корзину">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M2 4H3.5L4.5 10H12.5L14 4H2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <circle cx="5" cy="13" r="1" fill="currentColor"/>
+                    <circle cx="12" cy="13" r="1" fill="currentColor"/>
+                  </svg>
+                  В корзину
+                </button>
+              </div>
+            </div>
+            
+            <div class="product-card animate-on-scroll" data-category="mac">
+              <div class="product-image">
+                <img
+                  src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spaceblack-select-202310?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1697230830200"
+                  alt="MacBook Pro 14&quot;"
+                  loading="lazy" decoding="async" width="512" height="328"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">MacBook Pro 14&quot;</h3>
+                <p class="product-description">Мощь, меняющая всё.</p>
+                <div class="product-price">
+                  <span class="current-price">239 990 ₽</span>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Добавить MacBook Pro в корзину">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M2 4H3.5L4.5 10H12.5L14 4H2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <circle cx="5" cy="13" r="1" fill="currentColor"/>
+                    <circle cx="12" cy="13" r="1" fill="currentColor"/>
+                  </svg>
+                  В корзину
+                </button>
+              </div>
+            </div>
+            
+            <div class="product-card animate-on-scroll" data-category="ipad">
+              <div class="product-image">
+                <img
+                  src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-air-select-202203-blue?wid=470&hei=556&fmt=png-alpha&.v=1645667448278"
+                  alt="iPad Air"
+                  loading="lazy" decoding="async" width="512" height="328"
+                />
+                <div class="product-badge sale">Скидка</div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">iPad Air</h3>
+                <p class="product-description">Лёгкий. Яркий. Мощный.</p>
+                <div class="product-price">
+                  <span class="current-price">59 990 ₽</span>
+                  <span class="old-price">69 990 ₽</span>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Добавить iPad Air в корзину">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M2 4H3.5L4.5 10H12.5L14 4H2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <circle cx="5" cy="13" r="1" fill="currentColor"/>
+                    <circle cx="12" cy="13" r="1" fill="currentColor"/>
+                  </svg>
+                  В корзину
+                </button>
+              </div>
+            </div>
+            
+            <div class="product-card animate-on-scroll" data-category="watch">
+              <div class="product-image">
+                <img
+                  src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPU63ref_VW_34FR+watch-49-titanium-ultra2_VW_34FR+watch-face-49-alpine-green_VW_34FR_GEO_RU?wid=752&hei=720&bg-color=255,255,255&fit=hfit&qlt=80&.v=1694507026362"
+                  alt="Apple Watch Ultra 2"
+                  loading="lazy" decoding="async" width="512" height="328"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Apple Watch Ultra 2</h3>
+                <p class="product-description">Приключения ждут.</p>
+                <div class="product-price">
+                  <span class="current-price">89 990 ₽</span>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Добавить Apple Watch Ultra 2 в корзину">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M2 4H3.5L4.5 10H12.5L14 4H2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <circle cx="5" cy="13" r="1" fill="currentColor"/>
+                    <circle cx="12" cy="13" r="1" fill="currentColor"/>
+                  </svg>
+                  В корзину
+                </button>
+              </div>
+            </div>
+            
+            <div class="product-card animate-on-scroll" data-category="accessories">
+              <div class="product-image">
+                <img
+                  src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT223?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1693248332598"
+                  alt="AirPods Pro (2-го поколения)"
+                  loading="lazy" decoding="async" width="512" height="328"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">AirPods Pro (2-го поколения)</h3>
+                <p class="product-description">Активное шумоподавление.</p>
+                <div class="product-price">
+                  <span class="current-price">24 990 ₽</span>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Добавить AirPods Pro в корзину">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M2 4H3.5L4.5 10H12.5L14 4H2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <circle cx="5" cy="13" r="1" fill="currentColor"/>
+                    <circle cx="12" cy="13" r="1" fill="currentColor"/>
+                  </svg>
+                  В корзину
+                </button>
+              </div>
+            </div>
+            
+            <div class="product-card animate-on-scroll" data-category="accessories">
+              <div class="product-image">
+                <img
+                  src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU7T2_AV2?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1693006277259"
+                  alt="Apple Pencil (USB-C)"
+                  loading="lazy" decoding="async" width="512" height="328"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Apple Pencil (USB-C)</h3>
+                <p class="product-description">Точность в каждом штрихе.</p>
+                <div class="product-price">
+                  <span class="current-price">7 990 ₽</span>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Добавить Apple Pencil в корзину">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M2 4H3.5L4.5 10H12.5L14 4H2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <circle cx="5" cy="13" r="1" fill="currentColor"/>
+                    <circle cx="12" cy="13" r="1" fill="currentColor"/>
+                  </svg>
+                  В корзину
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- НОВЫЙ БЛОК: Экосистема Apple -->
+      <section class="ecosystem">
+        <div class="container">
+          <h2 class="section-title animate-on-scroll">
+            Одна волшебная экосистема.
+          </h2>
+          <p class="section-subtitle animate-on-scroll">
+            Все ваши устройства Apple работают вместе, как единое целое.
+          </p>
+          <div class="ecosystem-visual animate-on-scroll">
+            <img
+              src="https://www.apple.com/v/iphone/home/bu/images/overview/why-iphone/ios17_logo__b5tple2wsl2u_large.png"
+              class="ios-logo"
+              alt="iOS 17"
+              loading="lazy" decoding="async" width="256" height="256"
+            />
+            <p>
+              Начните писать письмо на Mac и допишите на iPhone. Показывайте
+              презентацию с iPad на большом экране через Apple TV. Всё
+              происходит просто и интуитивно.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- УНИКАЛЬНОЕ РЕШЕНИЕ: Интерактивный конфигуратор -->
+      <section class="configurator">
+        <div class="container">
+          <div class="configurator-visual animate-on-scroll">
+            <img
+              id="macbook-image"
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spaceblack-select-202310?wid=1200&hei=800&fmt=jpeg&qlt=90&.v=1697230830200"
+              alt="MacBook Pro"
+              loading="lazy" decoding="async" width="1200" height="800"
+            />
+          </div>
+          <div class="configurator-controls animate-on-scroll">
+            <h2 class="section-title">Создайте свой<br />MacBook Pro.</h2>
+            <div class="options-group">
+              <span class="option-label">Цвет</span>
+              <div class="color-options">
+                <button
+                  class="color-btn active"
+                  data-color="black"
+                  style="background-color: #33343a"
+                ></button>
+                <button
+                  class="color-btn"
+                  data-color="silver"
+                  style="background-color: #e3e4e6"
+                ></button>
+              </div>
+            </div>
+            <div class="options-group">
+              <span class="option-label">Память</span>
+              <div class="storage-options">
+                <button class="storage-btn active" data-price="239990">
+                  512 ГБ
+                </button>
+                <button class="storage-btn" data-price="259990">1 ТБ</button>
+                <button class="storage-btn" data-price="299990">2 ТБ</button>
+              </div>
+            </div>
+            <div class="configurator-price">
+              <span class="price-label">Итоговая цена:</span>
+              <span class="price" id="macbook-price">239 990 ₽</span>
+            </div>
+            <a href="#" class="cta-button">Купить</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- НОВЫЙ БЛОК: CTA / Подписка -->
+      <section class="cta-section">
+        <div class="container animate-on-scroll">
+          <h2>Будьте в курсе</h2>
+          <p>
+            Подпишитесь на нашу рассылку, чтобы первыми узнавать о новинках,
+            акциях и специальных предложениях.
+          </p>
+          <form class="newsletter-form" aria-label="Подписка на рассылку">
+            <input type="email" placeholder="Ваш email" required aria-label="Email" />
+            <button type="submit" class="cta-button">Подписаться</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="why-us">
+        <div class="container">
+          <h2 class="section-title animate-on-scroll">Почему AA Gadgets?</h2>
+          <div class="advantages-grid">
+            <div class="advantage-card animate-on-scroll">
+              <h4>Экспертная консультация</h4>
+              <p>
+                Наши специалисты знают всё о технике Apple и помогут вам с
+                выбором.
+              </p>
+            </div>
+            <div class="advantage-card animate-on-scroll">
+              <h4>Гарантия и сервис</h4>
+              <p>
+                Официальная гарантия и собственный сертифицированный сервисный
+                центр.
+              </p>
+            </div>
+            <div class="advantage-card animate-on-scroll">
+              <h4>Быстрая доставка</h4>
+              <p>
+                Доставим ваше новое устройство в любую точку города в день
+                заказа.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- НОВЫЙ БЛОК: Trade-in -->
+      <section class="trade-in">
+        <div class="container">
+          <div class="trade-in-content animate-on-scroll">
+            <h2 class="section-title">Обменяйте старое на новое.</h2>
+            <p class="section-subtitle">
+              Получите скидку на новое устройство, сдав старое в Trade-in. Это
+              просто и выгодно.
+            </p>
+            <div class="trade-in-calculator" role="form" aria-label="Калькулятор Trade-in">
+              <select id="device-type" aria-label="Тип устройства">
+                <option>Выберите устройство</option>
+                <option>iPhone</option>
+                <option>iPad</option>
+                <option>Mac</option>
+              </select>
+              <select id="device-model" disabled aria-label="Модель устройства">
+                <option>Выберите модель</option>
+              </select>
+              <button class="cta-button" id="calculate-btn" disabled aria-disabled="true">
+                Рассчитать выгоду
+              </button>
+            </div>
+            <p class="trade-in-result" id="trade-in-result"></p>
+          </div>
+          <div class="trade-in-visual animate-on-scroll">
+            <img
+              src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/tradein/trade-in-header-0423.image.large_2x.jpg"
+              alt="Trade-in"
+              loading="lazy" decoding="async" width="1600" height="900"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- AA:Gadgets: FAQ accordion -->
+      <section class="faq" aria-label="Частые вопросы">
+        <div class="container">
+          <h2 class="section-title animate-on-scroll">FAQ</h2>
+          <div class="accordion" id="faq-accordion">
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="faq1" id="faq1-button">Как оформить заказ?</button>
+              <div class="accordion-panel" id="faq1" role="region" aria-labelledby="faq1-button" hidden>
+                <p>Добавьте товар в корзину, оформите заказ и ожидайте звонок менеджера для подтверждения.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="faq2" id="faq2-button">Есть ли доставка в день заказа?</button>
+              <div class="accordion-panel" id="faq2" role="region" aria-labelledby="faq2-button" hidden>
+                <p>Да, по городу доставляем в день заказа при оформлении до 16:00.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="faq3" id="faq3-button">Гарантия и возврат</button>
+              <div class="accordion-panel" id="faq3" role="region" aria-labelledby="faq3-button" hidden>
+                <p>Официальная гарантия Apple. Возврат и обмен возможны в течение 14 дней согласно закону.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>AA Gadgets</h4>
+            <p>Премиальная техника Apple с сервисом высшего класса. Быстрая доставка, гарантия и профессиональная поддержка.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Telegram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-1.61 7.59c-.12.56-.44.7-.89.43l-2.46-1.81-1.19 1.15c-.13.13-.24.24-.49.24l.18-2.56 4.57-4.13c.2-.17-.04-.27-.31-.1l-5.64 3.55-2.43-.76c-.53-.16-.54-.53.11-.79l9.57-3.69c.44-.16.83.1.69.79z"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Каталог</h4>
+            <ul>
+              <li><a href="#">iPhone</a></li>
+              <li><a href="#">Mac</a></li>
+              <li><a href="#">iPad</a></li>
+              <li><a href="#">Apple Watch</a></li>
+              <li><a href="#">Аксессуары</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Сервис</h4>
+            <ul>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Гарантия</a></li>
+              <li><a href="#">Trade-in</a></li>
+              <li><a href="#">Сервисный центр</a></li>
+              <li><a href="#">Рассрочка</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Контакты</h4>
+            <div class="contact-info">
+              <p><strong>Телефон:</strong><br><a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+              <p><strong>Email:</strong><br><a href="mailto:info@aagadgets.ru">info@aagadgets.ru</a></p>
+              <p><strong>Адрес:</strong><br>г. Москва, ул. Примерная, 123</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <div class="footer-bottom-content">
+            <p>&copy; 2023 AA Gadgets. Все права защищены.</p>
+            <div class="footer-legal">
+              <a href="#">Политика конфиденциальности</a>
+              <a href="#">Условия использования</a>
+              <a href="#">Публичная оферта</a>
+            </div>
+          </div>
+          <div class="payment-methods">
+            <span>Способы оплаты:</span>
+            <div class="payment-icons">
+              <svg width="32" height="20" viewBox="0 0 32 20" fill="currentColor">
+                <rect width="32" height="20" rx="4" fill="#1f2937"/>
+                <text x="16" y="13" text-anchor="middle" fill="white" font-size="8" font-family="Arial">VISA</text>
+              </svg>
+              <svg width="32" height="20" viewBox="0 0 32 20" fill="currentColor">
+                <rect width="32" height="20" rx="4" fill="#1f2937"/>
+                <text x="16" y="13" text-anchor="middle" fill="white" font-size="7" font-family="Arial">MASTERCARD</text>
+              </svg>
+              <svg width="32" height="20" viewBox="0 0 32 20" fill="currentColor">
+                <rect width="32" height="20" rx="4" fill="#1f2937"/>
+                <text x="16" y="13" text-anchor="middle" fill="white" font-size="8" font-family="Arial">МИР</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AA:Gadgets: Floating cart drawer -->
+    <div class="cart-drawer" id="cart-drawer" aria-hidden="true">
+      <div class="cart-overlay"></div>
+      <div class="cart-content">
+        <div class="cart-header">
+          <h3>Корзина</h3>
+          <button class="cart-close" aria-label="Закрыть корзину">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+          <div class="cart-empty">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+              <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7L5 21H19L21 7M3 7H21M8 11V17M12 11V17M16 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Корзина пуста</p>
+          </div>
+        </div>
+        <div class="cart-footer">
+          <div class="cart-summary">
+            <div class="cart-total">
+              <span>Итого:</span>
+              <span class="cart-total-price">0 ₽</span>
+            </div>
+          </div>
+          <button class="checkout-btn" disabled>
+            Оформить заказ
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- AA:Gadgets: Cart trigger button -->
+    <button class="cart-trigger" id="cart-trigger" aria-label="Открыть корзину">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7L5 21H19L21 7M3 7H21M8 11V17M12 11V17M16 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="cart-count" id="cart-count">0</span>
+    </button>
+
+    <script src="app.js"></script>
+  </body>
+</html>

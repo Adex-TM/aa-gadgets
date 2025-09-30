@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина — AA Gadgets</title>
+    <meta name="description" content="Корзина товаров AA Gadgets." />
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+  </head>
+  <body>
+    <header class="header" role="banner">
+      <div class="container">
+        <a href="index.html" class="logo">AA Gadgets</a>
+        <nav class="main-nav" role="navigation" aria-label="Главное меню">
+          <ul>
+            <li><a href="categories.html#iphone">iPhone</a></li>
+            <li><a href="categories.html#mac">Mac</a></li>
+            <li><a href="categories.html#ipad">iPad</a></li>
+            <li><a href="categories.html#watch">Watch</a></li>
+            <li><a href="categories.html#accessories">Аксессуары</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button id="header-profile" class="header-profile-btn" aria-label="Профиль" title="Профиль">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 21a8 8 0 10-16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button id="header-cart-trigger" class="header-cart-btn" aria-label="Открыть корзину">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7L5 21H19L21 7M3 7H21M8 11V17M12 11V17M16 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="header-cart-count" id="header-cart-count">0</span>
+          </button>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Переключить тему" title="Переключить тему">
+            <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0z"/></svg>
+            <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.948a.75.75 0 01.981.634A11.25 11.25 0 0112 21 11.25 11.25 0 01.75 9.75 11.25 11.25 0 017.468-. "/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="cart-page">
+        <div class="container">
+          <h1 class="section-title">Корзина</h1>
+          <div id="cart-page-container" class="cart-page-layout"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trade-in — AA Gadgets</title>
+    <meta name="description" content="Обменяйте старое устройство Apple на новое в AA Gadgets. Быстрая оценка, выгодные условия Trade-in. Официальная программа Apple." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container">
+            <a href="index.html" class="logo">AA Gadgets</a>
+            <nav class="main-nav" role="navigation" aria-label="Главное меню">
+                <ul>
+                    <li><a href="catalog.html#iphone">iPhone</a></li>
+                    <li><a href="catalog.html#mac">Mac</a></li>
+                    <li><a href="catalog.html#ipad">iPad</a></li>
+                    <li><a href="catalog.html#watch">Watch</a></li>
+                    <li><a href="catalog.html#airpods">AirPods</a></li>
+                    <li><a href="catalog.html#accessories">Аксессуары</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="header-cart-trigger" class="header-cart-btn" aria-label="Открыть корзину">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7L5 21H19L21 7M3 7H21M8 11V17M12 11V17M16 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="header-cart-count" id="header-cart-count">0</span>
+                </button>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Переключить тему" title="Переключить тему">
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.591a.75.75 0 11-1.06-1.06l1.591-1.591a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM17.803 17.803a.75.75 0 01-1.06 0l-1.591-1.591a.75.75 0 111.06-1.06l1.591 1.591a.75.75 0 010 1.06zM12 21a.75.75 0 01-.75-.75v-2.25a.75.75 0 011.5 0v2.25a.75.75 0 01.75.75zM5.197 17.803a.75.75 0 01-1.06 0l1.591-1.591a.75.75 0 111.06 1.06l-1.591 1.591a.75.75 0 01-1.06 0zM3 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3.75A.75.75 0 013 12zM6.106 5.197a.75.75 0 011.06 0l1.591 1.591a.75.75 0 11-1.06 1.06L6.106 6.257a.75.75 0 010-1.06z"/>
+                    </svg>
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.948a.75.75 0 01.981.634A11.25 11.25 0 0112 21a11.25 11.25 0 01-11.25-11.25 11.25 11.25 0 016.718-10.402z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="services.html" class="breadcrumb-link">Сервисы</a></li>
+                    <li class="breadcrumb-item" aria-current="page">Trade-in</li>
+                </ol>
+            </div>
+        </nav>
+
+        <section class="tradein-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Trade-in</h1>
+                    <p class="hero-subtitle">Обменяйте старое устройство Apple на новое и получите скидку до 50%</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">15 000+</span>
+                            <span class="stat-label">Устройств обменяно</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50%</span>
+                            <span class="stat-label">Максимальная скидка</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24ч</span>
+                            <span class="stat-label">Оценка за 24 часа</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/tradein/trade-in-header-0423.image.large_2x.jpg" alt="Trade-in процесс" loading="lazy" decoding="async" width="600" height="400" />
+                </div>
+            </div>
+        </section>
+
+        <section class="tradein-calculator">
+            <div class="container">
+                <h2>Рассчитайте стоимость вашего устройства</h2>
+                <div class="calculator-form">
+                    <div class="form-step active" data-step="1">
+                        <h3>Выберите тип устройства</h3>
+                        <div class="device-types">
+                            <button class="device-type-btn" data-type="iphone">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="12" cy="9" r="3" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                <span>iPhone</span>
+                            </button>
+                            <button class="device-type-btn" data-type="ipad">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M8 21h8" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                <span>iPad</span>
+                            </button>
+                            <button class="device-type-btn" data-type="mac">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M8 21h8" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                <span>Mac</span>
+                            </button>
+                            <button class="device-type-btn" data-type="watch">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                <span>Apple Watch</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-step" data-step="2">
+                        <h3>Выберите модель</h3>
+                        <div class="device-models" id="device-models">
+                            <!-- Models will be loaded here -->
+                        </div>
+                        <button class="btn-secondary" id="back-to-types">Назад</button>
+                    </div>
+
+                    <div class="form-step" data-step="3">
+                        <h3>Оцените состояние устройства</h3>
+                        <div class="condition-options">
+                            <div class="condition-option">
+                                <input type="radio" id="excellent" name="condition" value="excellent">
+                                <label for="excellent">
+                                    <span class="condition-title">Отличное</span>
+                                    <span class="condition-desc">Без царапин, работает идеально</span>
+                                    <span class="condition-price">+0%</span>
+                                </label>
+                            </div>
+                            <div class="condition-option">
+                                <input type="radio" id="good" name="condition" value="good">
+                                <label for="good">
+                                    <span class="condition-title">Хорошее</span>
+                                    <span class="condition-desc">Небольшие царапины, работает хорошо</span>
+                                    <span class="condition-price">-10%</span>
+                                </label>
+                            </div>
+                            <div class="condition-option">
+                                <input type="radio" id="fair" name="condition" value="fair">
+                                <label for="fair">
+                                    <span class="condition-title">Удовлетворительное</span>
+                                    <span class="condition-desc">Заметные царапины, работает</span>
+                                    <span class="condition-price">-25%</span>
+                                </label>
+                            </div>
+                            <div class="condition-option">
+                                <input type="radio" id="poor" name="condition" value="poor">
+                                <label for="poor">
+                                    <span class="condition-title">Плохое</span>
+                                    <span class="condition-desc">Сильные повреждения, работает частично</span>
+                                    <span class="condition-price">-50%</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn-secondary" id="back-to-models">Назад</button>
+                    </div>
+
+                    <div class="form-step" data-step="4">
+                        <h3>Результат оценки</h3>
+                        <div class="evaluation-result">
+                            <div class="result-visual">
+                                <img id="result-device-image" src="" alt="" width="200" height="200" />
+                            </div>
+                            <div class="result-info">
+                                <h4 id="result-device-name"></h4>
+                                <p id="result-device-condition"></p>
+                                <div class="result-price">
+                                    <span class="price-label">Оценочная стоимость:</span>
+                                    <span class="price-value" id="result-price">0 ₽</span>
+                                </div>
+                                <div class="result-actions">
+                                    <button class="btn-primary" id="proceed-tradein">Продолжить обмен</button>
+                                    <button class="btn-secondary" id="back-to-condition">Назад</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tradein-benefits">
+            <div class="container">
+                <h2>Почему выбирают Trade-in в AA Gadgets</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Официальная программа</h3>
+                        <p>Участвуем в официальной программе Trade-in Apple с гарантией честной оценки</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2V22M17 5H9.5C8.11929 5 7 6.11929 7 7.5S8.11929 10 9.5 10H14.5C15.8807 10 17 11.1193 17 12.5S15.8807 15 14.5 15H7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Мгновенная скидка</h3>
+                        <p>Получите скидку на новое устройство сразу при сдаче старого</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7L5 21H19L21 7M3 7H21M8 11V17M12 11V17M16 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Быстрая оценка</h3>
+                        <p>Оценка вашего устройства за 5 минут в нашем магазине</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Лучшие цены</h3>
+                        <p>Предлагаем одни из самых выгодных условий обмена в городе</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tradein-process">
+            <div class="container">
+                <h2>Как проходит обмен</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Оценка устройства</h3>
+                            <p>Принесите ваше устройство в магазин для бесплатной оценки состояния</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Выбор нового устройства</h3>
+                            <p>Выберите новое устройство Apple из нашего каталога</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Оформление обмена</h3>
+                            <p>Оформите обмен с учетом скидки за сданное устройство</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Получение нового устройства</h3>
+                            <p>Заберите новое устройство и наслаждайтесь обновлением</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tradein-faq">
+            <div class="container">
+                <h2>Часто задаваемые вопросы</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Какие устройства принимаются в Trade-in?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Мы принимаем iPhone, iPad, Mac, Apple Watch и AirPods в любом состоянии. Устройство должно быть разблокировано и принадлежать вам.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Как рассчитывается стоимость устройства?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Стоимость зависит от модели, года выпуска, объема памяти, состояния устройства и текущих рыночных цен. Мы используем официальные данные Apple для расчета.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Можно ли обменять устройство без чека?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Да, чек не обязателен. Главное условие - устройство должно быть разблокировано и принадлежать вам. Мы проверим это при оценке.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Сколько времени занимает обмен?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Весь процесс занимает 15-30 минут. Оценка устройства - 5 минут, выбор нового устройства и оформление - 10-25 минут в зависимости от сложности.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Готовы обменять устройство?</h2>
+                <p>Приходите в наш магазин для бесплатной оценки и выгодного обмена</p>
+                <div class="cta-actions">
+                    <a href="tel:+79000000000" class="btn-primary">Позвонить</a>
+                    <a href="catalog.html" class="btn-secondary">Посмотреть каталог</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AA Gadgets</h4>
+                    <p>Премиальная техника Apple с сервисом высшего класса. Быстрая доставка, гарантия и поддержка.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Telegram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-1.61 7.59c-.12.56-.44.7-.89.43l-2.46-1.81-1.19 1.15c-.13.13-.24.24-.49.24l.18-2.56 4.57-4.13c.2-.17-.04-.27-.31-.1l-5.64 3.55-2.43-.76c-.53-.16-.54-.53.11-.79l9.57-3.69c.44-.16.83.1.69.79z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="catalog.html#iphone">iPhone</a></li>
+                        <li><a href="catalog.html#mac">Mac</a></li>
+                        <li><a href="catalog.html#ipad">iPad</a></li>
+                        <li><a href="catalog.html#watch">Apple Watch</a></li>
+                        <li><a href="catalog.html#airpods">AirPods</a></li>
+                        <li><a href="catalog.html#accessories">Аксессуары</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Сервис</h4>
+                    <ul>
+                        <li><a href="delivery.html">Доставка и оплата</a></li>
+                        <li><a href="warranty.html">Гарантия</a></li>
+                        <li><a href="tradein.html">Trade-in</a></li>
+                        <li><a href="service.html">Сервисный центр</a></li>
+                        <li><a href="installment.html">Рассрочка</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <div class="contact-info">
+                        <p><strong>Телефон:</strong><br><a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+                        <p><strong>Email:</strong><br><a href="mailto:info@aagadgets.ru">info@aagadgets.ru</a></p>
+                        <p><strong>Адрес:</strong><br>г. Москва, ул. Примерная, 123</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2023 AA Gadgets. Все права защищены.</p>
+                    <div class="footer-legal">
+                        <a href="privacy.html">Политика конфиденциальности</a>
+                        <a href="terms.html">Условия использования</a>
+                        <a href="offer.html">Публичная оферта</a>
+                    </div>
+                </div>
+                <div class="payment-methods">
+                    <span>Способы оплаты:</span>
+                    <div class="payment-icons">
+                        <svg width="32" height="20" viewBox="0 0 32 20" fill="currentColor">
+                            <rect width="32" height="20" rx="4" fill="#1f2937"/>
+                            <text x="16" y="13" text-anchor="middle" fill="white" font-size="8" font-family="Arial">VISA</text>
+                        </svg>
+                        <svg width="32" height="20" viewBox="0 0 32 20" fill="currentColor">
+                            <rect width="32" height="20" rx="4" fill="#1f2937"/>
+                            <text x="16" y="13" text-anchor="middle" fill="white" font-size="7" font-family="Arial">MASTERCARD</text>
+                        </svg>
+                        <svg width="32" height="20" viewBox="0 0 32 20" fill="currentColor">
+                            <rect width="32" height="20" rx="4" fill="#1f2937"/>
+                            <text x="16" y="13" text-anchor="middle" fill="white" font-size="8" font-family="Arial">МИР</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

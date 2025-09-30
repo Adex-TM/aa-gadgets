@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Админ-панель — AA Gadgets</title>
+    <meta name="description" content="Администрирование AA Gadgets: товары, заказы, пользователи, настройки." />
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+  </head>
+  <body>
+    <header class="header" role="banner">
+      <div class="container">
+        <a href="index.html" class="logo">AA Gadgets</a>
+        <nav class="main-nav" role="navigation" aria-label="Главное меню">
+          <ul>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button id="header-profile" class="header-profile-btn" aria-label="Профиль" title="Профиль">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 21a8 8 0 10-16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="admin-page">
+        <div class="container">
+          <div class="admin-layout">
+            <aside class="admin-sidebar">
+              <h3>Управление</h3>
+              <nav class="admin-nav">
+                <button class="admin-tab active" data-tab="dashboard">Панель</button>
+                <button class="admin-tab" data-tab="products">Товары</button>
+                <button class="admin-tab" data-tab="orders">Заказы</button>
+                <button class="admin-tab" data-tab="users">Пользователи</button>
+                <button class="admin-tab" data-tab="settings">Настройки</button>
+              </nav>
+            </aside>
+            <div class="admin-content">
+              <div class="admin-panel" id="admin-dashboard">
+                <div class="cards-grid">
+                  <div class="card"><h3>Заказы</h3><p class="muted" id="admin-stats-orders">0</p></div>
+                  <div class="card"><h3>Товары</h3><p class="muted" id="admin-stats-products">0</p></div>
+                  <div class="card"><h3>Пользователи</h3><p class="muted" id="admin-stats-users">0</p></div>
+                </div>
+              </div>
+
+              <div class="admin-panel hidden" id="admin-products">
+                <div class="admin-actions">
+                  <button class="cta-button" id="product-add">Добавить товар</button>
+                </div>
+                <div id="products-table" class="admin-table"></div>
+                <form class="admin-form hidden" id="product-form" aria-label="Товар">
+                  <h3 id="product-form-title">Новый товар</h3>
+                  <div class="form-row">
+                    <div class="form-group"><label for="p-name">Название</label><input id="p-name" type="text" required /></div>
+                    <div class="form-group"><label for="p-price">Цена</label><input id="p-price" type="number" min="0" required /></div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group"><label for="p-category">Категория</label><select id="p-category"><option value="iphone">iPhone</option><option value="mac">Mac</option><option value="ipad">iPad</option><option value="watch">Watch</option><option value="accessories">Аксессуары</option></select></div>
+                    <div class="form-group"><label for="p-image">Изображение (URL)</label><input id="p-image" type="url" placeholder="https://..." /></div>
+                  </div>
+                  <div class="form-group"><label for="p-desc">Описание</label><input id="p-desc" type="text" /></div>
+                  <div class="form-row">
+                    <div class="form-group"><label><input type="checkbox" id="p-instock" checked /> В наличии</label></div>
+                    <div class="form-group"><label><input type="checkbox" id="p-new" /> Новинка</label></div>
+                    <div class="form-group"><label><input type="checkbox" id="p-sale" /> Скидка</label></div>
+                  </div>
+                  <div class="admin-form-actions">
+                    <button type="submit" class="cta-button">Сохранить</button>
+                    <button type="button" class="cta-button secondary" id="product-cancel">Отмена</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="admin-panel hidden" id="admin-orders">
+                <div id="orders-table" class="admin-table"></div>
+              </div>
+
+              <div class="admin-panel hidden" id="admin-users">
+                <div id="users-table" class="admin-table"></div>
+              </div>
+
+              <div class="admin-panel hidden" id="admin-settings">
+                <form class="admin-form" id="admin-settings-form">
+                  <h3>Основные настройки</h3>
+                  <div class="form-group"><label for="s-shop-name">Название магазина</label><input id="s-shop-name" type="text" placeholder="AA Gadgets" /></div>
+                  <div class="form-group"><label for="s-phone">Телефон</label><input id="s-phone" type="tel" placeholder="+7 (900) 000-00-00" /></div>
+                  <button type="submit" class="cta-button">Сохранить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+  </html>
+
+

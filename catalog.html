@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог — AA Gadgets</title>
+    <meta name="description" content="Полный каталог техники Apple в AA Gadgets: iPhone, Mac, iPad, Watch, AirPods и аксессуары. Официальная гарантия, быстрая доставка." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container">
+            <a href="index.html" class="logo">AA Gadgets</a>
+            <nav class="main-nav" role="navigation" aria-label="Главное меню">
+                <ul>
+                    <li><a href="catalog.html#iphone">iPhone</a></li>
+                    <li><a href="catalog.html#mac">Mac</a></li>
+                    <li><a href="catalog.html#ipad">iPad</a></li>
+                    <li><a href="catalog.html#watch">Watch</a></li>
+                    <li><a href="catalog.html#airpods">AirPods</a></li>
+                    <li><a href="catalog.html#accessories">Аксессуары</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Поиск товаров..." class="search-input" />
+                    <button class="search-btn" aria-label="Поиск">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <button id="header-cart-trigger" class="header-cart-btn" aria-label="Открыть корзину">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7L5 21H19L21 7M3 7H21M8 11V17M12 11V17M16 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="header-cart-count" id="header-cart-count">0</span>
+                </button>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Переключить тему" title="Переключить тему">
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.591a.75.75 0 11-1.06-1.06l1.591-1.591a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM17.803 17.803a.75.75 0 01-1.06 0l-1.591-1.591a.75.75 0 111.06-1.06l1.591 1.591a.75.75 0 010 1.06zM12 21a.75.75 0 01-.75-.75v-2.25a.75.75 0 011.5 0v2.25a.75.75 0 01.75.75zM5.197 17.803a.75.75 0 01-1.06 0l1.591-1.591a.75.75 0 111.06 1.06l-1.591 1.591a.75.75 0 01-1.06 0zM3 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3.75A.75.75 0 013 12zM6.106 5.197a.75.75 0 011.06 0l1.591 1.591a.75.75 0 11-1.06 1.06L6.106 6.257a.75.75 0 010-1.06z"/>
+                    </svg>
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.948a.75.75 0 01.981.634A11.25 11.25 0 0112 21a11.25 11.25 0 01-11.25-11.25 11.25 11.25 0 016.718-10.402z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Главная</a></li>
+                    <li class="breadcrumb-item" aria-current="page">Каталог</li>
+                </ol>
+            </div>
+        </nav>
+
+        <section class="catalog-page">
+            <div class="container">
+                <div class="catalog-layout">
+                    <!-- Sidebar with filters -->
+                    <aside class="catalog-sidebar">
+                        <div class="sidebar-section">
+                            <h3>Категории</h3>
+                            <ul class="category-filters">
+                                <li><a href="#all" class="category-filter active" data-category="all">Все товары</a></li>
+                                <li><a href="#iphone" class="category-filter" data-category="iphone">iPhone</a></li>
+                                <li><a href="#mac" class="category-filter" data-category="mac">Mac</a></li>
+                                <li><a href="#ipad" class="category-filter" data-category="ipad">iPad</a></li>
+                                <li><a href="#watch" class="category-filter" data-category="watch">Apple Watch</a></li>
+                                <li><a href="#airpods" class="category-filter" data-category="airpods">AirPods</a></li>
+                                <li><a href="#accessories" class="category-filter" data-category="accessories">Аксессуары</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <h3>Цена</h3>
+                            <div class="price-range">
+                                <input type="range" id="price-min" min="0" max="500000" value="0" class="price-slider">
+                                <input type="range" id="price-max" min="0" max="500000" value="500000" class="price-slider">
+                                <div class="price-labels">
+                                    <span id="price-min-label">0 ₽</span>
+                                    <span id="price-max-label">500 000 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <h3>Бренд</h3>
+                            <div class="brand-filters">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="apple" checked>
+                                    <span class="checkmark"></span>
+                                    Apple
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <h3>Наличие</h3>
+                            <div class="availability-filters">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="in-stock" checked>
+                                    <span class="checkmark"></span>
+                                    В наличии
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="pre-order">
+                                    <span class="checkmark"></span>
+                                    Предзаказ
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <h3>Специальные предложения</h3>
+                            <div class="special-filters">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="sale">
+                                    <span class="checkmark"></span>
+                                    Скидки
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="new">
+                                    <span class="checkmark"></span>
+                                    Новинки
+                                </label>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Main content area -->
+                    <div class="catalog-content">
+                        <div class="catalog-header">
+                            <h1>Каталог товаров</h1>
+                            <div class="catalog-controls">
+                                <div class="results-count">
+                                    <span id="results-count">Найдено товаров: 0</span>
+                                </div>
+                                <div class="view-controls">
+                                    <button class="view-btn active" data-view="grid" aria-label="Сетка">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                            <path d="M3 3H10V10H3V3Z" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M14 3H21V10H14V3Z" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M3 14H10V21H3V14Z" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M14 14H21V21H14V14Z" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </button>
+                                    <button class="view-btn" data-view="list" aria-label="Список">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                            <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="sort-controls">
+                                    <select class="sort-select" aria-label="Сортировка товаров">
+                                        <option value="popular">По популярности</option>
+                                        <option value="price-low">Сначала дешевле</option>
+                                        <option value="price-high">Сначала дороже</option>
+                                        <option value="newest">Сначала новинки</option>
+                                        <option value="name">По названию</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Products grid -->
+                        <div class="products-grid" id="products-grid">
+                            <!-- Products will be loaded here via JavaScript -->
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <button class="pagination-btn prev" disabled>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Предыдущая
+                            </button>
+                            <div class="pagination-numbers">
+                                <button class="pagination-number active">1</button>
+                                <button class="pagination-number">2</button>
+                                <button class="pagination-number">3</button>
+                                <span class="pagination-dots">...</span>
+                                <button class="pagination-number">10</button>
+                            </div>
+                            <button class="pagination-btn next">
+                                Следующая
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AA Gadgets</h4>
+                    <p>Премиальная техника Apple с сервисом высшего класса. Быстрая доставка, гарантия и поддержка.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Telegram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-1.61 7.59c-.12.56-.44.7-.89.43l-2.46-1.81-1.19 1.15c-.13.13-.24.24-.49.24l.18-2.56 4.57-4.13c.2-.17-.04-.27-.31-.1l-5.64 3.55-2.43-.76c-.53-.16-.54-.53.11-.79l9.57-3.69c.44-.16.83.1.69.79z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="catalog.html#iphone">iPhone</a></li>
+                        <li><a href="catalog.html#mac">Mac</a></li>
+                        <li><a href="catalog.html#ipad">iPad</a></li>
+                        <li><a href="catalog.html#watch">Apple Watch</a></li>
+                        <li><a href="catalog.html#airpods">AirPods</a></li>
+                        <li><a href="catalog.html#accessories">Аксессуары</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Сервис</h4>
+                    <ul>
+                        <li><a href="delivery.html">Доставка и оплата</a></li>
+                        <li><a href="warranty.html">Гарантия</a></li>
+                        <li><a href="tradein.html">Trade-in</a></li>
+                        <li><a href="service.html">Сервисный центр</a></li>
+                        <li><a href="installment.html">Рассрочка</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <div class="contact-info">
+                        <p><strong>Телефон:</strong><br><a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+                        <p><strong>Email:</strong><br><a href="mailto:info@aagadgets.ru">info@aagadgets.ru</a></p>
+                        <p><strong>Адрес:</strong><br>г. Москва, ул. Примерная, 123</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2023 AA Gadgets. Все права защищены.</p>
+                    <div class="footer-legal">
+                        <a href="privacy.html">Политика конфиденциальности</a>
+                        <a href="terms.html">Условия использования</a>
+                        <a href="offer.html">Публичная оферта</a>
+                    </div>
+                </div>
+                <div class="payment-methods">
+                    <span>Способы оплаты:</span>
+                    <div class="payment-icons">
+                        <svg width="32" height="20" viewBox="0 0 32 20" fill="currentColor">
+                            <rect width="32" height="20" rx="4" fill="#1f2937"/>
+                            <text x="16" y="13" text-anchor="middle" fill="white" font-size="8" font-family="Arial">VISA</text>
+                        </svg>
+                        <svg width="32" height="20" viewBox="0 0 32 20" fill="currentColor">
+                            <rect width="32" height="20" rx="4" fill="#1f2937"/>
+                            <text x="16" y="13" text-anchor="middle" fill="white" font-size="7" font-family="Arial">MASTERCARD</text>
+                        </svg>
+                        <svg width="32" height="20" viewBox="0 0 32 20" fill="currentColor">
+                            <rect width="32" height="20" rx="4" fill="#1f2937"/>
+                            <text x="16" y="13" text-anchor="middle" fill="white" font-size="8" font-family="Arial">МИР</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart drawer -->
+    <div class="cart-drawer" id="cart-drawer" aria-hidden="true">
+        <div class="cart-overlay"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Корзина</h3>
+                <button class="cart-close" aria-label="Закрыть корзину">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <div class="cart-empty">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7L5 21H19L21 7M3 7H21M8 11V17M12 11V17M16 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p>Корзина пуста</p>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Итого:</span>
+                        <span class="cart-total-price">0 ₽</span>
+                    </div>
+                </div>
+                <button class="checkout-btn" disabled>Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

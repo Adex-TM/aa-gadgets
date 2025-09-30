@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Категории — AA Gadgets</title>
+    <meta name="description" content="Категории каталога AA Gadgets: iPhone, Mac, iPad, Watch и аксессуары. Премиальный выбор с доставкой и гарантией." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+  </head>
+  <body>
+    <header class="header" role="banner">
+      <div class="container">
+        <a href="index.html" class="logo">AA Gadgets</a>
+        <nav class="main-nav" role="navigation" aria-label="Главное меню">
+          <ul>
+            <li><a href="categories.html#iphone" aria-current="page">iPhone</a></li>
+            <li><a href="categories.html#mac">Mac</a></li>
+            <li><a href="categories.html#ipad">iPad</a></li>
+            <li><a href="categories.html#watch">Watch</a></li>
+            <li><a href="categories.html#accessories">Аксессуары</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button id="header-cart-trigger" class="header-cart-btn" aria-label="Открыть корзину">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7L5 21H19L21 7M3 7H21M8 11V17M12 11V17M16 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="header-cart-count" id="header-cart-count">0</span>
+          </button>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Переключить тему" title="Переключить тему">
+            <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.591a.75.75 0 11-1.06-1.06l1.591-1.591a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM17.803 17.803a.75.75 0 01-1.06 0l-1.591-1.591a.75.75 0 111.06-1.06l1.591 1.591a.75.75 0 010 1.06zM12 21a.75.75 0 01-.75-.75v-2.25a.75.75 0 011.5 0v2.25a.75.75 0 01-.75.75zM5.197 17.803a.75.75 0 010-1.06l1.591-1.591a.75.75 0 111.06 1.06l-1.591 1.591a.75.75 0 01-1.06 0zM3 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3.75A.75.75 0 013 12z"/></svg>
+            <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.463-.948a.75.75 0 01.981.634A11.25 11.25 0 0112 21a11.25 11.25 0 01-11.25-11.25 11.25 11.25 0 016.718-10.402z" clip-rule="evenodd"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <div class="container">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Главная</a></li>
+            <li class="breadcrumb-item" aria-current="page">Категории</li>
+          </ol>
+        </div>
+      </nav>
+
+      <section class="categories" role="region" aria-label="Категории товаров">
+        <div class="container">
+          <h1 class="section-title animate-on-scroll">Категории</h1>
+          <p class="section-subtitle animate-on-scroll">Премиальная подборка техники Apple. Выберите направление и откройте каталог.</p>
+
+          <div class="categories-grid">
+            <a id="iphone" class="category-tile animate-on-scroll" href="index.html#catalog" aria-label="Перейти в каталог iPhone">
+              <div class="category-content">
+                <div>
+                  <h3>iPhone</h3>
+                  <p>Титан. Так прочен. Так лёгок. Так Pro.</p>
+                </div>
+                <span class="category-link"><span>Смотреть модели</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="category-image">
+                <img src="https://www.apple.com/v/iphone-15-pro/c/images/overview/design/design_hero_large.jpg" alt="iPhone 15 Pro" loading="lazy" decoding="async" width="1200" height="800"/>
+              </div>
+            </a>
+
+            <a id="mac" class="category-tile animate-on-scroll" href="index.html#catalog" aria-label="Перейти в каталог Mac">
+              <div class="category-content">
+                <div>
+                  <h3>Mac</h3>
+                  <p>Мощь, меняющая всё.</p>
+                </div>
+                <span class="category-link"><span>Смотреть модели</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="category-image">
+                <img src="https://www.apple.com/v/macbook-air-13-and-15-m2/b/images/overview/hero/hero_13_15_large.jpg" alt="MacBook Air" loading="lazy" decoding="async" width="1200" height="800"/>
+              </div>
+            </a>
+
+            <a id="ipad" class="category-tile animate-on-scroll" href="index.html#catalog" aria-label="Перейти в каталог iPad">
+              <div class="category-content">
+                <div>
+                  <h3>iPad</h3>
+                  <p>Мощный. Простой. Универсальный.</p>
+                </div>
+                <span class="category-link"><span>Смотреть модели</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="category-image">
+                <img src="https://www.apple.com/v/ipad/home/cd/images/overview/select/product_tile_ipad_pro__c4wvd5sdg1ye_large.png" alt="iPad Pro" loading="lazy" decoding="async" width="1200" height="800"/>
+              </div>
+            </a>
+
+            <a id="watch" class="category-tile animate-on-scroll" href="index.html#catalog" aria-label="Перейти в каталог Apple Watch">
+              <div class="category-content">
+                <div>
+                  <h3>Apple Watch</h3>
+                  <p>Следите за здоровьем и активностью.</p>
+                </div>
+                <span class="category-link"><span>Смотреть модели</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="category-image">
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MPU63ref_VW_34FR+watch-49-titanium-ultra2_VW_34FR+watch-face-49-alpine-green_VW_34FR_GEO_RU?wid=752&hei=720&bg-color=255,255,255&fit=hfit&qlt=80&.v=1694507026362" alt="Apple Watch Ultra 2" loading="lazy" decoding="async" width="1200" height="800"/>
+              </div>
+            </a>
+
+            <a id="accessories" class="category-tile animate-on-scroll" href="index.html#catalog" aria-label="Перейти в каталог аксессуаров">
+              <div class="category-content">
+                <div>
+                  <h3>Аксессуары</h3>
+                  <p>Идеальные дополнения к вашим устройствам.</p>
+                </div>
+                <span class="category-link"><span>Смотреть модели</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="category-image">
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT223?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1693248332598" alt="AirPods Pro" loading="lazy" decoding="async" width="1200" height="800"/>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>AA Gadgets</h4>
+            <p>Премиальная техника Apple с сервисом высшего класса. Быстрая доставка, гарантия и поддержка.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Telegram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-1.61 7.59c-.12.56-.44.7-.89.43l-2.46-1.81-1.19 1.15c-.13.13-.24.24-.49.24l.18-2.56 4.57-4.13c.2-.17-.04-.27-.31-.1l-5.64 3.55-2.43-.76c-.53-.16-.54-.53.11-.79l9.57-3.69c.44-.16.83.1.69.79z"/></svg></a>
+              <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Каталог</h4>
+            <ul>
+              <li><a href="categories.html#iphone">iPhone</a></li>
+              <li><a href="categories.html#mac">Mac</a></li>
+              <li><a href="categories.html#ipad">iPad</a></li>
+              <li><a href="categories.html#watch">Apple Watch</a></li>
+              <li><a href="categories.html#accessories">Аксессуары</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Сервис</h4>
+            <ul>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Гарантия</a></li>
+              <li><a href="#">Trade-in</a></li>
+              <li><a href="#">Сервисный центр</a></li>
+              <li><a href="#">Рассрочка</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Контакты</h4>
+            <div class="contact-info">
+              <p><strong>Телефон:</strong><br /><a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+              <p><strong>Email:</strong><br /><a href="mailto:info@aagadgets.ru">info@aagadgets.ru</a></p>
+              <p><strong>Адрес:</strong><br />г. Москва, ул. Примерная, 123</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-bottom-content">
+            <p>&copy; 2023 AA Gadgets. Все права защищены.</p>
+            <div class="footer-legal">
+              <a href="#">Политика конфиденциальности</a>
+              <a href="#">Условия использования</a>
+              <a href="#">Публичная оферта</a>
+            </div>
+          </div>
+          <div class="payment-methods">
+            <span>Способы оплаты:</span>
+            <div class="payment-icons">
+              <svg width="32" height="20" viewBox="0 0 32 20" fill="currentColor"><rect width="32" height="20" rx="4" fill="#1f2937"/><text x="16" y="13" text-anchor="middle" fill="white" font-size="8" font-family="Arial">VISA</text></svg>
+              <svg width="32" height="20" viewBox="0 0 32 20" fill="currentColor"><rect width="32" height="20" rx="4" fill="#1f2937"/><text x="16" y="13" text-anchor="middle" fill="white" font-size="7" font-family="Arial">MASTERCARD</text></svg>
+              <svg width="32" height="20" viewBox="0 0 32 20" fill="currentColor"><rect width="32" height="20" rx="4" fill="#1f2937"/><text x="16" y="13" text-anchor="middle" fill="white" font-size="8" font-family="Arial">МИР</text></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cart-drawer" id="cart-drawer" aria-hidden="true">
+      <div class="cart-overlay"></div>
+      <div class="cart-content">
+        <div class="cart-header">
+          <h3>Корзина</h3>
+          <button class="cart-close" aria-label="Закрыть корзину">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+          <div class="cart-empty">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7L5 21H19L21 7M3 7H21M8 11V17M12 11V17M16 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p>Корзина пуста</p>
+          </div>
+        </div>
+        <div class="cart-footer">
+          <div class="cart-summary">
+            <div class="cart-total">
+              <span>Итого:</span>
+              <span class="cart-total-price">0 ₽</span>
+            </div>
+          </div>
+          <button class="checkout-btn" disabled>Оформить заказ</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="cart-trigger" id="cart-trigger" aria-label="Открыть корзину">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7M3 7L5 21H19L21 7M3 7H21M8 11V17M12 11V17M16 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="cart-count" id="cart-count">0</span>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+ </html>
+
+
