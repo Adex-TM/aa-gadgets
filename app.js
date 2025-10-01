@@ -1962,3 +1962,93 @@ document.addEventListener('submit', (e) => {
         setTimeout(()=> App.navigateTo('profile.html'), 600);
     }
 }, true);
+
+
+// Внутри объекта App, найдите функцию initializePage и добавьте case:
+initializePage() {
+    const currentPath = window.location.pathname;
+    this.state.currentPage = this.getPageFromPath(currentPath);
+    
+    console.log('Initializing page:', this.state.currentPage);
+    
+    // Initialize page-specific functionality
+    switch (this.state.currentPage) {
+        case 'catalog':
+            this.initCatalog();
+            break;
+        case 'cart':
+            this.initCartPage();
+            break;
+        // ... другие case ...
+        case 'product': // <-- НОВАЯ СТРОКА
+            this.initProductPage(); // <-- НОВАЯ СТРОКА
+            break; // <-- НОВАЯ СТРОКА
+        default:
+            this.initHome();
+    }
+    
+    // Common initialization
+    this.initCommon();
+}
+
+// Внутри объекта App, найдите функцию getPageFromPath и добавьте условие:
+getPageFromPath(path) {
+    if (path === '/' || path === '/index.html') return 'home';
+    if (path.includes('product.html')) return 'product'; // <-- НОВАЯ СТРОКА
+    // ... остальные условия ...
+}
+
+// В самый конец файла app.js (или внутри объекта App) добавьте новую функцию:
+App.initProductPage = function() {
+// Image Gallery
+const mainImg = document.getElementById('main-product-img');
+const thumbnails = document.querySelectorAll('.thumbnail-item');
+if (mainImg && thumbnails.length) {
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            const newSrc = thumb.dataset.src;
+            if (newSrc) {
+                mainImg.style.opacity = '0';
+                setTimeout(() => {
+                    mainImg.src = newSrc;
+                    mainImg.style.opacity = '1';
+                }, 200);
+            }
+            thumbnails.forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        });
+    });
+}
+
+// Config Options
+const colorBtns = document.querySelectorAll('.color-btn');
+const storageBtns = document.querySelectorAll('.storage-btn');
+colorBtns.forEach(btn => btn.addEventListener('click', () => {
+    colorBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}));
+storageBtns.forEach(btn => btn.addEventListener('click', () => {
+    storageBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}));
+
+// Tabs
+const tabLinks = document.querySelectorAll('.tab-link');
+const tabPanels = document.querySelectorAll('.tab-panel');
+tabLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        const tabId = link.dataset.tab;
+        
+        tabLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+
+        tabPanels.forEach(panel => {
+            if (panel.id === `tab-${tabId}`) {
+                panel.classList.add('active');
+            } else {
+                panel.classList.remove('active');
+            }
+        });
+    });
+});
+};
